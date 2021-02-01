@@ -151,7 +151,6 @@ legend {
 
 .project {
     position: relative;
-    width: 50%;
     width: 300px;
     margin: 1rem;
   }
@@ -159,11 +158,13 @@ legend {
   .image {
     opacity: 1;
     display: block;
-    justify-content: space-evenly
-    height: auto;
-    width: auto;
+    justify-content: space-evenly;
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
     transition: .5s ease;
     backface-visibility: hidden;
+    object-fit : cover;
   }
   
   .description {
@@ -193,8 +194,90 @@ legend {
     padding: 16px 32px;
   }
 
+/*début contact*/
+#contact {
+  display: flex;
+  padding: 2em;
+  margin: 2em;
+  border: 1px solid #0389ff;
+}
+
+#form {
+  width: 100%;
+}
+
+#form fieldset {
+  border-left: 1px solid #0389ff;
+  padding: .5em 1em 0;
+  margin-bottom: 2em;
+}
+#form legend {
+  margin-left: -.3em;
+  font-size: 1.1em;
+}
+
+.form-row {
+  display: flex;
+  margin-bottom: .4em;
+}
+
+.form-row .label {
+  flex-basis: 30%;
+  margin: 0;
+  padding-right: 3%;
+}
+
+/* tous les enfants direct d'un élément ayant la class form-row */
+/* sauf les .label, vu qu'ils ont des règles plus spécifiques définies juste au dessus 😉 */
+.form-row > * {
+  flex-basis: 70%;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group > * {
+  margin: 0 .5em 0 0;
+}
+
+/* moche mais bon, sinon la cochette prend toute la largeur (enfin, 70%), pas sûr que ça rende bien sur tous les navigateurs 🤔 */
+#info {
+  flex-basis: 1em;
+}
+
+#contact input[type=text],
+#contact input[type=email],
+#contact textarea,
+#contact select
+{
+   background-color: #f9f9f9;
+  border: none;
+  border-bottom: 1px solid #0389ff;
+}
+#contact input[type=email] {
+  width: 100%;
+}
+#contact textarea {
+  padding: .2em;
+  width: 100%;
+}
+#contact button {
+  background-color: #0389ff;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3em;
+  padding: 5px 10px;
+}
+
+/*fin contact*/
 
 .network {
     height: 30px;
     margin: 1rem;
 }
+
+
