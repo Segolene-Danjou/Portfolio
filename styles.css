@@ -1,10 +1,8 @@
 html {
-    background-color: #dcf6fc;
     font-family: 'Poppins', sans-serif;
     font: white;
 }
 
-/* navbar */
 header ul {
     list-style-type: none;
     margin: 0;
@@ -28,12 +26,9 @@ header ul {
   }
   
   
-  /* Change the link color to #111 (black) on hover */
  header li a:hover {
     background-color: #111;
   }
-
-
 
 
   @media screen and (max-width: 600px) {
@@ -41,10 +36,9 @@ header ul {
     ul.topnav li {float: none;}
   }
 
-  /* navbar */
 
 body {
-    max-width: 75%;
+  
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -69,6 +63,22 @@ h2 {
     padding: 1.5rem;
 }
 
+.text {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#parcours {
+ 
+}
+
+#audice, #sets, #nz, #after, .skills__soft{
+
+  background-color: rgba(55, 152, 173, 0.02);
+
+}
+
+
 em {
     font-weight: 600;
 }
@@ -83,24 +93,29 @@ strong {
     justify-content: center;
     margin: 1.5rem auto;
     font-weight: 600;
-}
-
-.subjects__left {
-    width: 50%;
-
-}
-
-.subjects__right {
-    width: 50%;
-
+    flex-wrap: wrap;
 }
 
 .subjects__pictures {
-    height: 5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.subject{
+  margin: 5px;
+  height : 150px;
+  width: 200px;
+}
+
+a {
+  text-decoration: none;
 }
 
 figcaption {
     margin: 1rem;
+    text-align: center;
 }
 
 .skills {
@@ -164,6 +179,8 @@ legend {
     transition: .5s ease;
     backface-visibility: hidden;
     object-fit : cover;
+  
+    box-shadow: 10px 10px 31px -14px rgba(0,0,0,0.75);
   }
   
   .description {
@@ -194,12 +211,12 @@ legend {
   }
 
 /*début contact*/
-#contact {
+/* #contact {
   display: flex;
   padding: 2em;
   margin: 2em;
   border: 1px solid #0389ff;
-}
+} */
 
 #form {
   width: 100%;
@@ -226,8 +243,6 @@ legend {
   padding-right: 3%;
 }
 
-/* tous les enfants direct d'un élément ayant la class form-row */
-/* sauf les .label, vu qu'ils ont des règles plus spécifiques définies juste au dessus 😉 */
 .form-row > * {
   flex-basis: 70%;
 }
@@ -241,7 +256,6 @@ legend {
   margin: 0 .5em 0 0;
 }
 
-/* moche mais bon, sinon la cochette prend toute la largeur (enfin, 70%), pas sûr que ça rende bien sur tous les navigateurs 🤔 */
 #info {
   flex-basis: 1em;
 }
@@ -277,6 +291,20 @@ legend {
 .network {
     height: 70px;
     margin: 1rem;
+}
+
+#upButton {
+  position: fixed;
+  bottom: 20%;
+  right: 0;
+  color:white;
+  text-decoration: none;
+  background: #444752;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  transform: rotateZ(270deg);
 }
 
 
